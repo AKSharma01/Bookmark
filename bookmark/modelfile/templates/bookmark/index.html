@@ -1,0 +1,10 @@
+{% extends "formTemplate/index.html" %}
+
+{% block content %}
+<table border="1">
+	<tr><td>Sr No.</td><td>Title</td></tr>
+	{% for value in object_list %}
+		<tr><td>{{value.id}}</td><td><a href="{{value.link}}" target="_blank">{{value.title}}</a></td></tr>
+	{% endfor %}
+</table>
+{% endblock %}
